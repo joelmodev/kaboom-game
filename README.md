@@ -1,4 +1,4 @@
 # Kaboom Games
-**Versão** 1.0.3
+**Versão** 1.0.4
 Chrome Dino
 Pong

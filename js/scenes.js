@@ -1,5 +1,10 @@
+const JUMP_FORCE = 800;
+
+
+
 scene('game', () => {
-    //Chão do jogo
+    
+
     add([
         rect(width(), 48),
         pos(0, height() - 48),
@@ -17,7 +22,7 @@ scene('game', () => {
     // .jump() when "space" key is pressed
     onKeyPress("space", () => {
         if (bean.isGrounded()) {
-            bean.jump()
+            bean.jump(800)
         }
     })
     //Colisão com "tree"
@@ -25,7 +30,6 @@ scene('game', () => {
         addKaboom(bean.pos)
         go("lose", score);
     })
-
     loop(rand(1, 2.5), () => {
         add([
             rect(48, rand(30, 64)),
@@ -34,7 +38,7 @@ scene('game', () => {
             pos(width(), height() - 48),
             anchor("botleft"),
             color(255, 180, 255),
-            move(LEFT, 240),
+            move(LEFT, 480),
             offscreen({ destroy: true }),
             "tree",
         ]);
