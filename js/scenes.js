@@ -41,6 +41,7 @@ scene('game', () => {
             move(LEFT, 480),
             offscreen({ destroy: true }),
             "tree",
+            { passed: false },
         ]);
     });
     // keep track of score
@@ -51,10 +52,14 @@ scene('game', () => {
         pos(24, 24),
     ]);
 
-    loop(0.5, () => {
-        score++;
-        scoreLabel.text = score;
-    })
+    onUpdate("tree", (p) => {
+		// check if bean passed the pipe
+		if (p.pos.x + p.width <= bean.pos.x && p.passed === false) {
+			score++
+		    scoreLabel.text = score
+			p.passed = true
+		}
+	})
     
 })
 
