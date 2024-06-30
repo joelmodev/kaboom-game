@@ -22,7 +22,7 @@ scene('game', () => {
     // .jump() when "space" key is pressed
     onKeyPress("space", () => {
         if (bean.isGrounded()) {
-            bean.jump(800)
+            bean.jump(JUMP_FORCE)
         }
     })
     //Colisão com "tree"
