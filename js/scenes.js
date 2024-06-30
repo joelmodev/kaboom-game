@@ -21,7 +21,7 @@ scene('game', () => {
     ])
     // .jump() when "space" key is pressed
     onKeyPress("space", () => {
-        debug.log("Tecla espaço precionada")
+        debug.log("Tecla espaço precionada");
         if (bean.isGrounded()) {
             bean.jump(800)
         }
