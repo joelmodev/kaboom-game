@@ -1,25 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chrome Dino</title>
+    <style>html{overflow: hidden;}</style>
 </head>
-<body>
-    <script type="module">
 
-        // import kaboom.js
-        import kaboom from "https://unpkg.com/kaboom@3000.0.1/dist/kaboom.mjs";
-        
-        // initialize kaboom context
-        kaboom();
-        
-        // add a piece of text at position (120, 80)
-        add([
-            text("hello"),
-            pos(120, 80),
-        ]);
-        
-    </script>
+<body>
+    <script src="https://unpkg.com/kaboom@3000.0.1/dist/kaboom.js"></script>
+    <script src="/js/game.js"></script>
+    <script src="/js/scenes.js"></script>
 </body>
+
 </html>
